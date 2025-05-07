@@ -1,0 +1,471 @@
+{
+  "countries": [
+    {
+      "id": "1",
+      "name": "United States"
+    },
+    {
+      "id": "2",
+      "name": "Canada"
+    },
+    {
+      "id": "3",
+      "name": "United Kingdom"
+    },
+    {
+      "id": "4",
+      "name": "Australia"
+    },
+    {
+      "id": "5",
+      "name": "India"
+    },
+    {
+      "id": "6",
+      "name": "Germany"
+    },
+    {
+      "id": "7",
+      "name": "France"
+    },
+    {
+      "id": "8",
+      "name": "Italy"
+    },
+    {
+      "id": "9",
+      "name": "Spain"
+    },
+    {
+      "id": "10",
+      "name": "China"
+    },
+    {
+      "id": "11",
+      "name": "Japan"
+    },
+    {
+      "id": "12",
+      "name": "South Korea"
+    },
+    {
+      "id": "13",
+      "name": "Brazil"
+    },
+    {
+      "id": "14",
+      "name": "Mexico"
+    },
+    {
+      "id": "15",
+      "name": "Russia"
+    },
+    {
+      "id": "16",
+      "name": "South Africa"
+    },
+    {
+      "id": "17",
+      "name": "Argentina"
+    },
+    {
+      "id": "18",
+      "name": "Saudi Arabia"
+    },
+    {
+      "id": "19",
+      "name": "Turkey"
+    },
+    {
+      "id": "20",
+      "name": "Netherlands"
+    },
+    {
+      "id": "21",
+      "name": "Sweden"
+    },
+    {
+      "id": "22",
+      "name": "Norway"
+    },
+    {
+      "id": "23",
+      "name": "Denmark"
+    },
+    {
+      "id": "24",
+      "name": "Finland"
+    },
+    {
+      "id": "25",
+      "name": "Switzerland"
+    },
+    {
+      "id": "26",
+      "name": "New Zealand"
+    },
+    {
+      "id": "27",
+      "name": "Ireland"
+    },
+    {
+      "id": "28",
+      "name": "Singapore"
+    },
+    {
+      "id": "29",
+      "name": "Malaysia"
+    },
+    {
+      "id": "30",
+      "name": "Thailand"
+    }
+  ],
+  "states": [
+    {
+      "id": "1",
+      "name": "Karnataka"
+    },
+    {
+      "id": "2",
+      "name": "Maharashtra"
+    },
+    {
+      "id": "3",
+      "name": "Gujarat"
+    },
+    {
+      "id": "4",
+      "name": "Rajasthan"
+    },
+    {
+      "id": "5",
+      "name": "Uttar Pradesh"
+    },
+    {
+      "id": "6",
+      "name": "Haryana"
+    },
+    {
+      "id": "7",
+      "name": "Punjab"
+    },
+    {
+      "id": "8",
+      "name": "Delhi"
+    },
+    {
+      "id": "9",
+      "name": "Bihar"
+    },
+    {
+      "id": "10",
+      "name": "West Bengal"
+    },
+    {
+      "id": "11",
+      "name": "California"
+    },
+    {
+      "id": "12",
+      "name": "Texas"
+    },
+    {
+      "id": "13",
+      "name": "New York"
+    },
+    {
+      "id": "14",
+      "name": "Queensland"
+    },
+    {
+      "id": "15",
+      "name": "Ontario"
+    },
+    {
+      "id": "16",
+      "name": "British Columbia"
+    },
+    {
+      "id": "17",
+      "name": "Bavaria"
+    },
+    {
+      "id": "18",
+      "name": "Ile-de-France"
+    },
+    {
+      "id": "19",
+      "name": "Tokyo"
+    },
+    {
+      "id": "20",
+      "name": "Seoul"
+    },
+    {
+      "id": "21",
+      "name": "São Paulo"
+    },
+    {
+      "id": "22",
+      "name": "Buenos Aires"
+    },
+    {
+      "id": "23",
+      "name": "Western Cape"
+    },
+    {
+      "id": "24",
+      "name": "Moscow Oblast"
+    },
+    {
+      "id": "25",
+      "name": "Dubai"
+    },
+    {
+      "id": "26",
+      "name": "Singapore"
+    },
+    {
+      "id": "27",
+      "name": "Stockholm"
+    },
+    {
+      "id": "28",
+      "name": "Oslo"
+    },
+    {
+      "id": "29",
+      "name": "Helsinki"
+    },
+    {
+      "id": "30",
+      "name": "Zurich"
+    }
+  ],
+  "citys": [
+    {
+      "id": "1",
+      "name": "Bangalore"
+    },
+    {
+      "id": "2",
+      "name": "Mumbai"
+    },
+    {
+      "id": "3",
+      "name": "Ahmedabad"
+    },
+    {
+      "id": "4",
+      "name": "Jaipur"
+    },
+    {
+      "id": "5",
+      "name": "Lucknow"
+    },
+    {
+      "id": "6",
+      "name": "Chandigarh"
+    },
+    {
+      "id": "7",
+      "name": "Ludhiana"
+    },
+    {
+      "id": "8",
+      "name": "Delhi"
+    },
+    {
+      "id": "9",
+      "name": "Patna"
+    },
+    {
+      "id": "10",
+      "name": "Kolkata"
+    },
+    {
+      "id": "11",
+      "name": "Los Angeles"
+    },
+    {
+      "id": "12",
+      "name": "Houston"
+    },
+    {
+      "id": "13",
+      "name": "New York City"
+    },
+    {
+      "id": "14",
+      "name": "Brisbane"
+    },
+    {
+      "id": "15",
+      "name": "Toronto"
+    },
+    {
+      "id": "16",
+      "name": "Vancouver"
+    },
+    {
+      "id": "17",
+      "name": "Munich"
+    },
+    {
+      "id": "18",
+      "name": "Paris"
+    },
+    {
+      "id": "19",
+      "name": "Tokyo"
+    },
+    {
+      "id": "20",
+      "name": "Seoul"
+    },
+    {
+      "id": "21",
+      "name": "São Paulo"
+    },
+    {
+      "id": "22",
+      "name": "Buenos Aires"
+    },
+    {
+      "id": "23",
+      "name": "Cape Town"
+    },
+    {
+      "id": "24",
+      "name": "Moscow"
+    },
+    {
+      "id": "25",
+      "name": "Dubai"
+    },
+    {
+      "id": "26",
+      "name": "Singapore"
+    },
+    {
+      "id": "27",
+      "name": "Stockholm"
+    },
+    {
+      "id": "28",
+      "name": "Oslo"
+    },
+    {
+      "id": "29",
+      "name": "Helsinki"
+    },
+    {
+      "id": "30",
+      "name": "Zurich"
+    }
+  ],
+  "homeTypes": [
+    {
+      "id": "1",
+      "name": "Home"
+    },
+    {
+      "id": "2",
+      "name": "Office"
+    },
+    {
+      "id": "3",
+      "name": "Other"
+    }
+  ],
+  "documents": [
+    {
+      "id": "1",
+      "name": "Aadhar Card"
+    },
+    {
+      "id": "2",
+      "name": "PAN Card"
+    },
+    {
+      "id": "3",
+      "name": "Passport"
+    },
+    {
+      "id": "4",
+      "name": "Voter ID"
+    },
+    {
+      "id": "5",
+      "name": "Driving License"
+    }
+  ],
+  "agents": [
+    {
+      "id": "1",
+      "name": "Agent 1",
+      "password": "password1",
+      "email": "agent1@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Agent 2",
+      "password": "password2",
+      "email": "agent2@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Agent 3",
+      "password": "password3",
+      "email": "agent3@example.com"
+    },
+    {
+      "id": "4",
+      "name": "Agent 4",
+      "password": "password4",
+      "email": "agent4@example.com"
+    },
+    {
+      "id": "5",
+      "name": "Agent 5",
+      "password": "password5",
+      "email": "agent5@example.com"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "fullName": "John Doe",
+      "email": "john@example.com",
+      "phone": "1234567890",
+      "country": "United States",
+      "state": "California",
+      "city": "Toronto",
+      "document": "PAN Card",
+      "homeType": "Home"
+    },
+    {
+      "id": "4f34",
+      "name": "Vijetha",
+      "email": "vijetha@example.com",
+      "phone": "12345678",
+      "country": "Japan",
+      "state": "Ontario",
+      "city": "New York City",
+      "document": "Voter ID",
+      "homeType": "Home"
+    },
+    {
+      "id": "c58f",
+      "name": "Ravi",
+      "email": "ravi@exaple.com",
+      "phone": "12345678",
+      "country": "Germany",
+      "state": "Uttar Pradesh",
+      "city": "Brisbane",
+      "document": "Passport",
+      "homeType": "Other"
+    }
+  ]
+}

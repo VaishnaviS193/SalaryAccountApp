@@ -1,0 +1,48 @@
+<div class="dashboard-container">
+  <h2>Open Salaried Account</h2>
+  <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Full Name:</label>
+      <input id="name" formControlName="name" type="text" />
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" />
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <input id="phone" formControlName="phone" type="text" />
+    </div>
+    <div>
+      <label for="country">Country:</label>
+      <select id="country" formControlName="country">
+        <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="state">State:</label>
+      <select id="state" formControlName="state">
+        <option *ngFor="let state of states" [value]="state.name">{{ state.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <select id="city" formControlName="city">
+        <option *ngFor="let city of cities" [value]="city.name">{{ city.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="document">Document:</label>
+      <select id="document" formControlName="document">
+        <option *ngFor="let document of documents" [value]="document.name">{{ document.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="homeType">Home Type:</label>
+      <select id="homeType" formControlName="homeType">
+        <option *ngFor="let homeType of homeTypes" [value]="homeType.name">{{ homeType.name }}</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="accountForm.invalid">Submit</button>
+  </form>
+</div>
