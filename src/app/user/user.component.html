@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Welcome, {{ userName }}</h2>
+
+  <div class="balance-card">
+    <h3>Account Balance</h3>
+    <p class="amount">₹{{ accountBalance | number:'1.2-2' }}</p>
+  </div>
+
+  <div class="stats">
+    <div class="card spent-month">
+      <h4>Spent This Month</h4>
+      <p>₹{{ spentThisMonth | number:'1.2-2' }}</p>
+    </div>
+    <div class="card spent-year">
+      <h4>Spent This Year</h4>
+      <p>₹{{ spentThisYear | number:'1.2-2' }}</p>
+    </div>
+    <div class="card interest-earned">
+      <h4>Interest Earned</h4>
+      <p>₹{{ interestEarned | number:'1.2-2' }}</p>
+    </div>
+    <div class="card upcoming-features">
+      <h4>Upcoming Features</h4>
+      <ul>
+        <li>Loan Management</li>
+        <li>Investment Tracking</li>
+        <li>Bill Payment Reminders</li>
+        <li>Personalized Offers</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card user-details">
+    <h4>Your Details</h4>
+    <p><strong>Name:</strong> {{ userDetails.firstname }} {{ userDetails.lastname }}</p>
+    <p><strong>Email:</strong> {{ userDetails.email }}</p>
+    <p><strong>Phone:</strong> {{ userDetails.phone }}</p>
+    <p><strong>Address:</strong> {{ userDetails.line1 }}, {{ userDetails.line2 }}, {{ userDetails.city }}, {{ userDetails.state }}, {{ userDetails.country }}</p>
+  </div>
+</div>

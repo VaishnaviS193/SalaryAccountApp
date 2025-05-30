@@ -1,0 +1,44 @@
+<div class="container">
+  <h2>Welcome, {{ adminName }}</h2>
+
+  <button class="add-agent-btn" (click)="redirectToAddAgent()">
+    Add Agent
+  </button>
+
+  <div class="agents-list">
+    <h3>All Agents</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let agent of agents">
+          <td>{{ agent.name }}</td>
+          <td>{{ agent.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="contatus-list">
+    <h3>Contact Us Submissions</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contactus">
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.email }}</td>
+        <td>{{ contact.message }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>

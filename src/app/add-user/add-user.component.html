@@ -1,0 +1,168 @@
+<div class="container">
+  <h2>Open Salaried Account</h2>
+  <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+    <!-- Customer Details Section -->
+    <h3>Customer Details</h3>
+    <div>
+      <label for="firstname">First Name:</label>
+      <input id="firstname" type="text" formControlName="firstname" />
+      <div *ngIf="accountForm.get('firstname')?.invalid && accountForm.get('firstname')?.touched">
+        First Name is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="middlename">Middle Name:</label>
+      <input id="middlename" type="text" formControlName="middlename" />
+    </div>
+
+    <div>
+      <label for="lastname">Last Name:</label>
+      <input id="lastname" type="text" formControlName="lastname" />
+      <div *ngIf="accountForm.get('lastname')?.invalid && accountForm.get('lastname')?.touched">
+        Last Name is required.
+      </div>
+    </div>
+    
+    <div>
+      <label for="email">Email ID:</label>
+      <input id="email" type="email" formControlName="email" />
+      <div *ngIf="accountForm.get('email')?.invalid && accountForm.get('email')?.touched">
+        <div *ngIf="accountForm.get('email')?.errors?.['required']">Email is required.</div>
+        <div *ngIf="accountForm.get('email')?.errors?.['email']">Invalid email format.</div>
+      </div>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" type="password" formControlName="password" />
+      <div *ngIf="accountForm.get('password')?.invalid && accountForm.get('password')?.touched">
+        <div *ngIf="accountForm.get('password')?.errors?.['required']">Password is required.</div>
+        <div *ngIf="accountForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long.</div>
+      </div>
+    </div>
+
+    <!-- Address Section -->
+    <h3>Address</h3>
+    <div>
+      <label for="addressType">Address Type:</label>
+      <select id="addressType" formControlName="addressType">
+        <option value="" disabled>Select</option>
+        <option *ngFor="let type of homeTypes" [value]="type.id">{{ type.name }}</option>
+      </select>
+      <div *ngIf="accountForm.get('addressType')?.invalid && accountForm.get('addressType')?.touched">
+        Address Type is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="line1">Line 1:</label>
+      <input id="line1" type="text" formControlName="line1" />
+      <div *ngIf="accountForm.get('line1')?.invalid && accountForm.get('line1')?.touched">
+        Line 1 is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="line2">Line 2:</label>
+      <input id="line2" type="text" formControlName="line2" />
+      <div *ngIf="accountForm.get('line2')?.invalid && accountForm.get('line2')?.touched">
+        Line 2 is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="line3">Line 3:</label>
+      <input id="line3" type="text" formControlName="line3" />
+    </div>
+
+    <div>
+      <label for="country">Country:</label>
+      <select id="country" formControlName="country" (change)="onCountryChange($event)">
+        <option value="" disabled>Select</option>
+        <option *ngFor="let country of countries" [value]="country.id">{{ country.name }}</option>
+      </select>
+      <div *ngIf="accountForm.get('country')?.invalid && accountForm.get('country')?.touched">
+        Country is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="state">State:</label>
+      <select id="state" formControlName="state" (change)="onStateChange($event)">
+        <option value="" disabled>Select</option>
+        <option *ngFor="let state of states" [value]="state.id">{{ state.name }}</option>
+      </select>
+      <div *ngIf="accountForm.get('state')?.invalid && accountForm.get('state')?.touched">
+        State is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="city">City:</label>
+      <select id="city" formControlName="city">
+        <option value="" disabled>Select</option>
+        <option *ngFor="let city of cities" [value]="city.name">{{ city.name }}</option>
+      </select>
+      <div *ngIf="accountForm.get('city')?.invalid && accountForm.get('city')?.touched">
+        City is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="pincode">Pin Code:</label>
+      <input id="pincode" type="text" formControlName="pincode" />
+      <div *ngIf="accountForm.get('pincode')?.invalid && accountForm.get('pincode')?.touched">
+        <div *ngIf="accountForm.get('pincode')?.errors?.['required']">Pin Code is required.</div>
+        <div *ngIf="accountForm.get('pincode')?.errors?.['minlength'] || accountForm.get('pincode')?.errors?.['maxlength']">
+          Pin Code must be 7 digits.
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label for="phone">Phone Number:</label>
+      <input id="phone" type="text" formControlName="phone" />
+      <div *ngIf="accountForm.get('phone')?.invalid && accountForm.get('phone')?.touched">
+        <div *ngIf="accountForm.get('phone')?.errors?.['required']">Phone Number is required.</div>
+        <div *ngIf="accountForm.get('phone')?.errors?.['pattern']">Phone Number must be in xxxx-nnnnnn format.</div>
+      </div>
+    </div>
+
+    <!-- Address Proof Section -->
+    <h3>Address Proof</h3>
+    <div>
+      <label for="documentType">Document Type:</label>
+      <select id="documentType" formControlName="documentType">
+        <option value="" disabled>Select</option>
+        <option *ngFor="let document of documents" [value]="document.id">{{ document.name }}</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="documentNumber">Document Number:</label>
+      <input id="documentNumber" type="text" formControlName="documentNumber" />
+    </div>
+
+    <div>
+      <label for="aadharNumber">Aadhar Number:</label>
+      <input id="aadharNumber" type="text" formControlName="aadharNumber" />
+      <div *ngIf="accountForm.get('aadharNumber')?.invalid && accountForm.get('aadharNumber')?.touched">
+        Aadhar Number must be 12 digits.
+      </div>
+    </div>
+
+    <div>
+      <label for="panNumber">PAN Number:</label>
+      <input id="panNumber" type="text" formControlName="panNumber" />
+      <div *ngIf="accountForm.get('panNumber')?.invalid && accountForm.get('panNumber')?.touched">
+        PAN Number must be in valid format (ABCDE1234F).
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div>
+      <button type="submit" [disabled]="accountForm.invalid">Save</button>
+      <button type="button" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

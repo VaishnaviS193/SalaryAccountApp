@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Contact Us</h2>
+  <p>
+    Have questions or need assistance? Feel free to reach out to us using the form below or through the provided contact details.
+  </p>
+
+  <h3>Contact Form</h3>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" type="text" placeholder="Enter your name" required />
+    </div>
+    <div class="input-group">
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" placeholder="Enter your email" required />
+    </div>
+    <div class="input-group">
+      <label for="message">Message:</label>
+      <textarea id="message" formControlName="message" rows="5" placeholder="Enter your message" required></textarea>
+    </div>
+    <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+  </form>
+
+  <h3>Contact Information</h3>
+  <ul>
+    <li>Email: support&#64;salaryaccount.com</li>
+    <li>Phone: +91 1234567890</li>
+    <li>Address: WTC-2, Bagmane Tech Park, Bangalore</li>
+  </ul>
+</div>

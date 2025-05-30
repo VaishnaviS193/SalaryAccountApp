@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Add Agent</h2>
+  <form [formGroup]="agentForm" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" type="text" required />
+    </div>
+    <div class="input-group">
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" required />
+    </div>
+    <div class="input-group">
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password" required />
+    </div>
+    <button type="submit" [disabled]="agentForm.invalid">Submit</button>
+  </form>
+</div>

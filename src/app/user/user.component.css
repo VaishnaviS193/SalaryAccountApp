@@ -1,0 +1,66 @@
+h2 {
+  text-align: center;
+  color: #007BFF;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Card styling */
+.card {
+  background-color: #007BFF; /* Blue background */
+  color: white; /* White text for contrast */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific card styles */
+.balance-card {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.stats .card {
+  flex: 1 1 calc(25% - 20px); /* Responsive cards with equal width */
+  text-align: center;
+}
+
+.user-details {
+  margin-top: 20px;
+}
+
+.user-details p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+/* Upcoming features list */
+.upcoming-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.upcoming-features ul li {
+  margin: 5px 0;
+  font-size: 0.9em;
+}

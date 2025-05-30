@@ -1,0 +1,56 @@
+<div class="container">
+  <h2>Welcome, {{ agentName }}</h2>
+
+  <button class="add-user-btn" (click)="redirectToAddUser()">Add Users</button>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (input)="searchUsers()"
+      placeholder="Search by name..."
+    />
+    <button (click)="sortUsers()">Sort by Name</button>
+  </div>
+
+  <!-- Users Grid -->
+  <div class="users-list">
+    <h3>All Users</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address Type</th>
+          <th>Address</th>
+          <th>Address Proof Doc Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of paginatedUsers">
+          <td>{{ user.firstname }} {{ user.middlename || '' }} {{ user.lastname }}</td>
+          <td>{{ user.addressType }}</td>
+          <td>{{ user.line1 }}, {{ user.line2 }}, {{ user.line3 || '' }}</td>
+          <td>{{ user.documentType }}</td>
+          <td>
+            <button (click)="editUser(user.id || '')">Edit</button>
+            <button (click)="deleteUser(user.id || '')">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button (click)="currentPage = currentPage - 1" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }}</span>
+    <button
+      (click)="currentPage = currentPage + 1"
+      [disabled]="currentPage * itemsPerPage >= filteredUsers.length"
+    >
+      Next
+    </button>
+  </div>
+</div>
